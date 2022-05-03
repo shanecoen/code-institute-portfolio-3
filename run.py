@@ -70,3 +70,9 @@ def ship_location():
                     count += 1
         return count
 
+start_game()
+turns = 10
+print(YOURBOARD)
+print(ENEMYBOARD)
+
+
