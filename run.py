@@ -1,3 +1,10 @@
+# Legend
+# X for placing ship and hit battlehsip
+# ' ' for available space
+# '-' for missed shot
+
+from random import randint
+
 # Your ship locations
 YOURBOARD = [[' '] * 10 for x in range(10)]
 # Enemy ship where hits and misses are displayed
@@ -28,3 +35,13 @@ def print_gameboard(board):
     for row in board:
         print("%d|%s" % (row_number, "|".join(row)))
         row_number += 1
+
+def random_ships(board):
+    """
+    Creates ships randonly on user and enemy boards
+    """
+    for ship in range(5):
+        ship_row, ship_column = randint(0,9), randint(0,9)
+        while board[ship_row][ship_column] == 'X':
+            ship_row, ship_column = randint(0,9), randint(0,9)
+        board[ship_row][ship_column] = 'X'
