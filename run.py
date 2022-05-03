@@ -6,9 +6,9 @@
 from random import randint
 
 # Your ship locations
-YOURBOARD = [[' '] * 10 for x in range(10)]
+YOURBOARD = [[' '] * 8 for x in range(8)]
 # Enemy ship where hits and misses are displayed
-ENEMYBOARD = [[' '] * 10 for i in range(10)]
+ENEMYBOARD = [[' '] * 8 for i in range(8)]
 
 # Converting letters to numbers
 convert_letters = {
@@ -20,8 +20,6 @@ convert_letters = {
     'F': 5,
     'G': 6,
     'H': 7,
-    'I': 8,
-    'J': 9,
     }
 
 def print_gameboard(board):
@@ -41,7 +39,7 @@ def random_ships(board):
     Creates ships randonly on user and enemy boards
     """
     for ship in range(5):
-        ship_row, ship_column = randint(0,9), randint(0,9)
+        ship_row, ship_column = randint(0,7), randint(0,7)
         while board[ship_row][ship_column] == 'X':
-            ship_row, ship_column = randint(0,9), randint(0,9)
+            ship_row, ship_column = randint(0,7), randint(0,7)
         board[ship_row][ship_column] = 'X'
