@@ -43,3 +43,17 @@ def random_ships(board):
         while board[ship_row][ship_column] == 'X':
             ship_row, ship_column = randint(0,7), randint(0,7)
         board[ship_row][ship_column] = 'X'
+
+def ship_location():
+    """
+    Ask the user which row (1-8) and column (A-H) they wish to guess.
+    """
+    row = input('Please enter ship row number from 1 - 8')
+    while row not in '12345678':
+        print('Please enter a vaid number')
+        row = input('Please enter ship row number from 1 - 8')
+    column = input ('Please enter a ship column letter A - H').upper()
+    while column not in 'ABCDEFGH':
+        print('Please enter a valid letter')
+        column = input('Please enter a ship column letter A - H').upper()
+    return int(row) - 1, convert_letters[column]
