@@ -36,7 +36,7 @@ def print_gameboard(board):
 
 def random_ships(board):
     """
-    Creates ships randonly on user and enemy boards
+    Creates 5 ships randonly on user and enemy boards
     """
     for ship in range(5):
         ship_row, ship_column = randint(0,7), randint(0,7)
@@ -57,3 +57,16 @@ def ship_location():
         print('Please enter a valid letter')
         column = input('Please enter a ship column letter A - H').upper()
     return int(row) - 1, convert_letters[column]
+
+    def ship_hit_counter(board): 
+        """
+        Counts how many ships user has hit.
+        If user hits 5 ships before computer, they win.
+        """
+        count = 0
+        for row in board:
+            for column in row:
+                if column == 'X':
+                    count += 1
+        return count
+
