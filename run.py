@@ -15,8 +15,8 @@ def print_gameboard(board):
     Displays gameboard which is lettered and 
     numbered to allow user to attack enemy ships
     """
-    print(' A B C D E F G H I J')
-    print(' -------------------')
+    print(' A B C D E F G H ')
+    print(' ---------------')
     row_number = 1
     for row in board:
         print("%d|%s" % (row_number, "|".join(row)))
