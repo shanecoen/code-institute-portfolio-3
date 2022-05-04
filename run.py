@@ -1,31 +1,28 @@
-# Legend
-# X for placing ship and hit battlehsip
-# ' ' for available space
-# '-' for missed shot
-
 from random import randint
 
-def game_rules():
-    """
-    This prints out the rules of battleship to expalin
-    to players how the games works
-    """
-    print('Welcome to Battleship')
-    print('')
-    print('The rules of battleship are as follows:')
-    print('')
-    print('Destroy your enemies ships before they destory yours')
-    print('There are 5 ships to be destroyed')
-    print('The gameboard consists of 64 squares')
-    print('You must chose which sqaure to attack using coordinates')
-    print('Pick a row from 1 - 8 and Column A - H')
-    print('If you select correctly you destroy 1 enemy ship')
-    print('A direct hit is represented by X and a miss by -')
-    print('Unselected squares are represented by a blank space')
-    print('Destroy all enemy ships before they destry yours to win')
-    print('You have 10 attempts to destroy ememy ships and win')
-    print('')
-    print('Have fun!!!')
+
+"""
+This prints out the rules of battleship to expalin
+to players how the games works
+"""
+print('')
+print('Welcome to Battleship')
+print('')
+print('The rules of battleship are as follows:')
+print('')
+print('1. Destroy your enemies ships before they destory yours')
+print('2. There are 5 ships to be destroyed')
+print('3. The gameboard consists of 64 squares')
+print('4. You must chose which sqaure to attack using coordinates')
+print('5. Pick a row from 1 - 8 and Column A - H')
+print('6. If you select correctly you destroy 1 enemy ship')
+print('7. A direct hit is represented by X and a miss by -')
+print('8. Unselected squares are represented by a blank space')
+print('9. Destroy all enemy ships before they destry yours to win')
+print('10. You have 10 attempts to destroy ememy ships and win')
+print('')
+print('Have fun!!!')
+print('')
 
 # Your ship locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
