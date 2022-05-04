@@ -2,7 +2,7 @@ from random import randint
 
 
 """
-This prints out the rules of battleship to expalin
+This prints out the rules of battleship to explain
 to players how the games works
 """
 print('')
@@ -34,11 +34,11 @@ def print_gameboard(board):
     Displays gameboard which is lettered and 
     numbered to allow user to attack enemy ships
     """
-    print(' A B C D E F G H ')
-    print(' ---------------')
+    print('   A  B   C   D   E   F   G   H  ')
+    print(' --------------------------------')
     row_number = 1
     for row in board:
-        print("%d|%s" % (row_number, "|".join(row)))
+        print("%d|%s" % (row_number, " | ".join(row)))
         row_number += 1
 
 # Converting letters to numbers
