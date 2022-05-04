@@ -58,35 +58,35 @@ def ship_location():
         column = input('Please enter a ship column letter A - H: ').upper()
     return int(row) - 1, convert_letters[column]
 
-    def ship_hit_counter(board): 
-        """
-        Counts how many ships user has hit.
-        If user hits 5 ships before computer, they win.
-        """
-        count = 0
-        for row in board:
-            for column in row:
-                if column == 'X':
-                    count += 1
-        return count
+def ship_hit_counter(board): 
+    """
+    Counts how many ships user has hit.
+    If user hits 5 ships before computer, they win.
+    """
+    count = 0
+    for row in board:
+        for column in row:
+            if column == 'X':
+                count += 1
+    return count
 
-start_game(YOURBOARD)
+random_ships(YOURBOARD)
 turns = 10
 while turns > 0:
     print('Battleship')
-    print_board(ENEMYBOARD)
+    print_gameboard(ENEMYBOARD)
     row, column = ship_location()
     if ENEMYBOARD[row][column] == '-':
         print('You have already guessed that')
     elif YOURBOARD[row][column] == 'X':
         print(' Congratulations, that is a direct hit')
-        YOURBOARD[row][column] = 'X'
+        ENEMYBOARD[row][column] = 'X'
         turns -= 1
     else:
         print('Sorry, that was not a direct hit')
-        YOURBOARD[row][column] = '-'
+        ENEMYBOARD[row][column] = '-'
         turns -= 1
-    if ship_hit_counter(YOURBOARD) == 5:
+    if ship_hit_counter(ENEMYBOARD) == 5:
         print('Congratulations, you are the winner')
         break
     print('You have ' + str(turns) + ' turns remaining')
