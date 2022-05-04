@@ -5,6 +5,28 @@
 
 from random import randint
 
+def game_rules():
+    """
+    This prints out the rules of battleship to expalin
+    to players how the games works
+    """
+    print('Welcome to Battleship')
+    print('')
+    print('The rules of battleship are as follows:')
+    print('')
+    print('Destroy your enemies ships before they destory yours')
+    print('There are 5 ships to be destroyed')
+    print('The gameboard consists of 64 squares')
+    print('You must chose which sqaure to attack using coordinates')
+    print('Pick a row from 1 - 8 and Column A - H')
+    print('If you select correctly you destroy 1 enemy ship')
+    print('A direct hit is represented by X and a miss by -')
+    print('Unselected squares are represented by a blank space')
+    print('Destroy all enemy ships before they destry yours to win')
+    print('You have 10 attempts to destroy ememy ships and win')
+    print('')
+    print('Have fun!!!')
+
 # Your ship locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
 # Enemy ship where hits and misses are displayed
