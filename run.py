@@ -110,9 +110,18 @@ def main():
             print('You have ' + str(turns) + ' turns remaining')
             if turns == 0:
                 print('Sorry, you ran out of turns, the game is over')
-                break
-
-    input("press any key to restart game")
+                print('Would you like to play again?')
+                answer = input('Enter Y or N: \n').upper()
+                print('')
+                while True:
+                    if answer == "Y":
+                        start_menu()
+                        main()
+                    elif answer == "N":
+                        print("Goodbye and thank you for playing")
+                        return False
+                    else:
+                        break
 
 start_menu()
 main()
