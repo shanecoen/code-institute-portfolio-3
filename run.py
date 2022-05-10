@@ -112,6 +112,5 @@ def main():
                 print('Sorry, you ran out of turns, the game is over')
                 break
 
-while True:
-    start_menu()
-    main()
+start_menu()
+main()
