@@ -1,6 +1,6 @@
 from random import randint
 
-def menu()
+def menu():
     """
     This is the game intro screen where user can choose
     to view rules or begin playing game
