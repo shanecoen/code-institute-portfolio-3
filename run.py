@@ -1,26 +1,52 @@
 from random import randint
 
-"""
-This prints out the rules of battleship to explain
-to players how the games works
-"""
-print('')
-print('Welcome to Battleship')
-print('')
-print('The rules of battleship are as follows:')
-print('')
-print('1. There are 5 enemy ships to be destroyed')
-print('3. The gameboard consists of 64 squares')
-print('4. You must chose which sqaure to attack using coordinates')
-print('5. Pick a row from 1 - 8 and Column A - H')
-print('6. If you select correctly you destroy 1 enemy ship')
-print('7. A direct hit is represented by X and a miss by -')
-print('8. Unselected squares are represented by a blank space')
-print('9. Destroy all enemy ships to win')
-print('10. You have 25 attempts to destroy ememy ships or you lose')
-print('')
-print('Have fun!!!')
-print('')
+def menu()
+    """
+    This is the game intro screen where user can choose
+    to view rules or begin playing game
+    """
+    clear_screen()
+    print('')
+    print('Welcome to Battleship')
+    print('')
+
+    while true:
+        try:
+            # Ask the user for an input
+            game_intro = input (
+                "Please type p to play game or press r to view game rules"
+                ).upper()
+            # If user presses i to view instructions
+            if game_intro == "I":
+                print(
+                    """
+            
+                    The rules of battleship are as follows:
+                    
+                    1. There are 5 enemy ships to be destroyed
+                    2. The gameboard consists of 64 squares
+                    3. You must chose which sqaure to attack using coordinates
+                    4. Pick a row from 1 - 8 and Column A - H
+                    5. If you select correctly you destroy 1 enemy ship
+                    6. A direct hit is represented by X and a miss by -
+                    7. Unselected squares are represented by a blank space
+                    8. Destroy all enemy ships to win')
+                    9. You have 25 attempts to destroy ememy ships or you lose
+                    
+                    Have fun!!!
+                    
+                    """
+                )
+                # If user presses p to start playing game
+                elif game_intro == "P":
+                    break
+                # Raise error if correct option is not chosen
+                else:
+                    raise ValueError()
+            except (AttributeError, ValueError):
+                print("Please type p to play game or press r to view game rules")
+        # If user has pressed p to begin playing game
+        clear_screen()
 
 # Global variable for your ship locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
