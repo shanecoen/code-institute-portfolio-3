@@ -36,14 +36,14 @@ def menu():
                     Have fun!!!
                     
                     """
-                )
+                    )
                 # If user presses p to start playing game
-                elif game_intro == "P":
-                    break
-                # Raise error if correct option is not chosen
-                else:
-                    raise ValueError()
-            except (AttributeError, ValueError):
+            elif game_intro == "P":
+                break
+            # Raise error if correct option is not chosen
+            else:
+                raise ValueError()
+        except (AttributeError, ValueError):
                 print("Please type p to play game or press r to view game rules")
         # If user has pressed p to begin playing game
         clear_screen()
