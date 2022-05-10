@@ -90,7 +90,7 @@ def main():
 
     if __name__ == "__main__":
         random_ships(YOURBOARD)
-        turns = 32
+        turns = 5
         while turns > 0:
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
@@ -111,6 +111,8 @@ def main():
             if turns == 0:
                 print('Sorry, you ran out of turns, the game is over')
                 break
+
+    input("press any key to restart game")
 
 start_menu()
 main()
