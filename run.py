@@ -1,6 +1,5 @@
 from random import randint
 
-
 """
 This prints out the rules of battleship to explain
 to players how the games works
@@ -10,7 +9,7 @@ print('Welcome to Battleship')
 print('')
 print('The rules of battleship are as follows:')
 print('')
-print('1. Destroy your enemies ships before they destory yours')
+print('1. Destroy your enemies ships before they destroy yours')
 print('2. There are 5 ships to be destroyed')
 print('3. The gameboard consists of 64 squares')
 print('4. You must chose which sqaure to attack using coordinates')
@@ -24,9 +23,9 @@ print('')
 print('Have fun!!!')
 print('')
 
-# Your ship locations
+# Global variable for your ship locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
-# Enemy ship where hits and misses are displayed
+# Global variable for enemy ship where hits and misses are displayed
 ENEMYBOARD = [[' '] * 8 for i in range(8)]
 
 def print_gameboard(board):
@@ -43,19 +42,13 @@ def print_gameboard(board):
 
 # Converting letters to numbers
 convert_letters = {
-    'A': 0, 
-    'B': 1, 
-    'C': 2, 
-    'D': 3, 
-    'E': 4,
-    'F': 5,
-    'G': 6,
-    'H': 7,
+    'A': 0, 'B': 1, 'C': 2, 'D': 3, 
+    'E': 4, 'F': 5, 'G': 6, 'H': 7,
     }
 
 def random_ships(board):
     """
-    Creates 5 ships randonly on user and enemy boards
+    Creates 5 ships randomly on user and enemy boards
     """
     for ship in range(5):
         ship_row, ship_column = randint(0,7), randint(0,7)
@@ -89,8 +82,9 @@ def ship_hit_counter(board):
                 count += 1
     return count
 
+if __name__ == "__main__":
 random_ships(YOURBOARD)
-turns = 10
+turns = 20
 while turns > 0:
     print('Battleship')
     print_gameboard(ENEMYBOARD)
