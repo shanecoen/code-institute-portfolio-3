@@ -90,7 +90,7 @@ def main():
 
     if __name__ == "__main__":
         random_ships(YOURBOARD)
-        turns = 5
+        turns = 32
         while turns > 0:
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
@@ -99,29 +99,18 @@ def main():
             elif YOURBOARD[row][column] == 'X':
                 print(' Congratulations, that is a direct hit')
                 ENEMYBOARD[row][column] = 'X'
-                turns -= 1
             else:
                 print('Sorry, that was not a direct hit')
                 ENEMYBOARD[row][column] = '-'
                 turns -= 1
             if ship_hit_counter(ENEMYBOARD) == 5:
-                print('Congratulations, you are the winner')
+                print('Congratulations, you have hit all targets and won!!!')
                 break
             print('You have ' + str(turns) + ' turns remaining')
             if turns == 0:
                 print('Sorry, you ran out of turns, the game is over')
-                print('Would you like to play again?')
-                answer = input('Enter Y or N: \n').upper()
-                print('')
-                while True:
-                    if answer == "Y":
-                        start_menu()
-                        main()
-                    elif answer == "N":
-                        print("Goodbye and thank you for playing")
-                        return False
-                    else:
-                        break
-
+                print('Please press run program to restart game')
+                break     
+            
 start_menu()
 main()
