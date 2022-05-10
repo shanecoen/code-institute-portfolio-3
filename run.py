@@ -12,7 +12,7 @@ def start_menu():
     The rules of battleship are as follows:
 
     1. This is a single player battleship game        
-    2. There are 5 enemy ships to be destroyed
+    2. There are 10 enemy ships to be destroyed
     3. The gameboard consists of 64 squares
     4. You must chose which square to attack using coordinates
     5. Pick a row from 1 - 8 and Column A - H
@@ -37,7 +37,7 @@ convert_letters = {
     'E': 4, 'F': 5, 'G': 6, 'H': 7,
     }
 
-def main():
+def main ():
 
     def print_gameboard(board):
         """
@@ -54,9 +54,9 @@ def main():
 
     def random_ships(board):
         """
-        Creates 5 ships randomly on user and enemy boards
+        Creates 10 ships randomly on user and enemy boards
         """
-        for ship in range(5):
+        for ship in range(10):
             ship_row, ship_column = randint(0,7), randint(0,7)
             while board[ship_row][ship_column] == 'X':
                 ship_row, ship_column = ship_location()
@@ -79,7 +79,7 @@ def main():
     def ship_hit_counter(board): 
         """
         Counts how many ships user has hit.
-        If user hits 5 ships before computer, they win.
+        If user hits 10 ships before using lives, they win.
         """
         count = 0
         for row in board:
@@ -103,14 +103,22 @@ def main():
                 print('Sorry, that was not a direct hit')
                 ENEMYBOARD[row][column] = '-'
                 turns -= 1
-            if ship_hit_counter(ENEMYBOARD) == 5:
+            if ship_hit_counter(ENEMYBOARD) == 10:
                 print('Congratulations, you have hit all targets and won!!!')
                 break
             print('You have ' + str(turns) + ' turns remaining')
             if turns == 0:
                 print('Sorry, you ran out of turns, the game is over')
                 print('Please press run program to restart game')
-                break     
-            
-start_menu()
-main()
+                break 
+
+def run_game():
+    """
+    Starts a new game
+    """
+    # Prints Battleship games rules to terminal  
+    start_menu()
+    # Runs the main game functions
+    main()   
+
+run_game()
