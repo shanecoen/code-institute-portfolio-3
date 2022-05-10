@@ -19,20 +19,19 @@ def start_menu():
     6. If you select correctly you destroy 1 enemy ship
     7. A direct hit is represented by X and a miss by -
     8. Unselected squares are represented by a blank space
-    9. Destroy all enemy ships to win
-    10. You have 25 attempts to destroy ememy ships or you lose
-    11. You gain 1 turn for direct hit & lose 1 for a miss
+    9. You have 25 attempts to destroy all ememy ships or you lose
+    10. You gain 1 turn for direct hit & lose 1 turn for a miss
         
     Have fun!!!
     """
     )
 
-# Global variable for your ship locations
-YOURBOARD = [[' '] * 8 for x in range(8)]
-# Global variable for enemy ship where hits and misses are displayed
-ENEMYBOARD = [[' '] * 8 for i in range(8)]
-
 def main ():
+
+    # Global variable for your ship locations
+    YOURBOARD = [[' '] * 8 for x in range(8)]
+    # Global variable for enemy ship where hits and misses are displayed
+    ENEMYBOARD = [[' '] * 8 for i in range(8)]
 
     # Converting letters to numbers
     convert_letters = {
@@ -55,7 +54,7 @@ def main ():
 
     def random_ships(board):
         """
-        Creates 10 ships randomly on user and enemy boards
+        Creates 10 enemy ships randomly on gameboard
         """
         for ship in range(10):
             ship_row, ship_column = randint(0,7), randint(0,7)
@@ -112,15 +111,27 @@ def main ():
             if turns == 0:
                 print('Sorry, you ran out of turns, the game is over')
                 print('Please press run program to restart game')
-                break 
+                break
 
 def run_game():
     """
     Starts a new game
     """
-    # Prints Battleship games rules to terminal  
+    # Displays welcome message and battleship game rules
     start_menu()
-    # Runs the main game functions
-    main()   
+    # Asks user if they are ready to play the game after reading game rules
+    print('Are you ready to play the game?')
+    answer = input('Enter Y or N: \n').upper()
+    print('')
+    while True:
+        if answer == 'Y':
+            # Runs the main game functions
+            main()
+        elif answer == 'N':
+            print('Please read game rules once more and press run program again')
+            return False
+        else: 
+            print('Please enter Y or N')
+            answer = input('Enter Y or N: \n').upper() 
 
 run_game()
