@@ -26,18 +26,18 @@ def start_menu():
     """
     )
 
-def main ():
+ # Global variable for your ship locations
+YOURBOARD = [[' '] * 8 for x in range(8)]
+# Global variable for enemy ship where hits and misses are displayed
+ENEMYBOARD = [[' '] * 8 for i in range(8)]
 
-    # Global variable for your ship locations
-    YOURBOARD = [[' '] * 8 for x in range(8)]
-    # Global variable for enemy ship where hits and misses are displayed
-    ENEMYBOARD = [[' '] * 8 for i in range(8)]
-
-    # Converting letters to numbers
-    convert_letters = {
+# Converting letters to numbers
+convert_letters = {
     'A': 0, 'B': 1, 'C': 2, 'D': 3, 
     'E': 4, 'F': 5, 'G': 6, 'H': 7,
     }
+
+def main ():   
 
     def print_gameboard(board):
         """
@@ -113,16 +113,35 @@ def main ():
                 print('Please press run program to restart game')
                 break
 
+def restart():
+    """
+    Asks the user if they would like to replay the game once finished
+    """
+    print('Would you like to play once more?')
+    answer = input('Enter Y or N: \n').upper()
+    while True: 
+        if answer == "Y":
+            run_game()
+        elif answer == "N":
+            print('Thank you for playing and goodbye!!!')
+            return False
+            break
+        else: 
+            print('Please Enter Y or N')
+            answer = input('Enter Y or N: \n').upper()
+
 def run_game():
     """
     Starts a new game
     """
     # Displays welcome message and battleship game rules
     start_menu()
+
     # Asks user if they are ready to play the game after reading game rules
     print('Are you ready to play the game?')
     answer = input('Enter Y or N: \n').upper()
     print('')
+
     while True:
         if answer == 'Y':
             # Runs the main game functions
@@ -132,6 +151,9 @@ def run_game():
             return False
         else: 
             print('Please enter Y or N')
-            answer = input('Enter Y or N: \n').upper() 
+            answer = input('Enter Y or N: \n').upper()
+    
+    # Asks the user if they would like to replay the game once finished
+    restart()
 
 run_game()
