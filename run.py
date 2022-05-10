@@ -49,6 +49,7 @@ def main():
         for row in board:
             print("%d|%s" % (row_number, " | ".join(row)))
             row_number += 1
+            print("")
 
     def random_ships(board):
         """
