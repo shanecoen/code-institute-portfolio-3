@@ -9,16 +9,15 @@ print('Welcome to Battleship')
 print('')
 print('The rules of battleship are as follows:')
 print('')
-print('1. Destroy your enemies ships before they destroy yours')
-print('2. There are 5 ships to be destroyed')
+print('1. There are 5 enemy ships to be destroyed')
 print('3. The gameboard consists of 64 squares')
 print('4. You must chose which sqaure to attack using coordinates')
 print('5. Pick a row from 1 - 8 and Column A - H')
 print('6. If you select correctly you destroy 1 enemy ship')
 print('7. A direct hit is represented by X and a miss by -')
 print('8. Unselected squares are represented by a blank space')
-print('9. Destroy all enemy ships before they destry yours to win')
-print('10. You have 10 attempts to destroy ememy ships and win')
+print('9. Destroy all enemy ships to win')
+print('10. You have 25 attempts to destroy ememy ships or you lose')
 print('')
 print('Have fun!!!')
 print('')
@@ -84,7 +83,7 @@ def ship_hit_counter(board):
 
 if __name__ == "__main__":
     random_ships(YOURBOARD)
-    turns = 20
+    turns = 25
     while turns > 0:
         print('Battleship')
         print_gameboard(ENEMYBOARD)
