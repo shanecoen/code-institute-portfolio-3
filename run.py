@@ -26,7 +26,7 @@ def start_menu():
     """
     )
 
- # Global variable for your ship locations
+# Global variable for your ship locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
 # Global variable for enemy ship where hits and misses are displayed
 ENEMYBOARD = [[' '] * 8 for i in range(8)]
@@ -37,7 +37,7 @@ convert_letters = {
     'E': 4, 'F': 5, 'G': 6, 'H': 7,
     }
 
-def main ():   
+def main():  
 
     def print_gameboard(board):
         """
@@ -70,7 +70,7 @@ def main ():
         while row not in '12345678':
             print('Please enter a vaid number')
             row = input('Please enter ship row number from 1 - 8: ')
-        column = input ('Please enter a ship column letter A - H: ').upper()
+        column = input('Please enter a ship column letter A - H: ').upper()
         while column not in 'ABCDEFGH':
             print('Please enter a valid letter')
             column = input('Please enter a ship column letter A - H: ').upper()
@@ -110,7 +110,6 @@ def main ():
             print('You have ' + str(turns) + ' turns remaining')
             if turns == 0:
                 print('Sorry, you ran out of turns, the game is over')
-                print('Please press run program to restart game')
                 break
 
 def restart():
@@ -146,6 +145,7 @@ def run_game():
         if answer == 'Y':
             # Runs the main game functions
             main()
+            break
         elif answer == 'N':
             print('Please read game rules once more and press run program again')
             return False
