@@ -6,23 +6,23 @@ def start_menu():
     to players how the games works
     """
     print(
-        """
-        Welcome to Battleship
+    """
+    Welcome to Battleship
         
-        The rules of battleship are as follows:
+    The rules of battleship are as follows:
         
-        1. There are 5 enemy ships to be destroyed
-        2. The gameboard consists of 64 squares
-        3. You must chose which sqaure to attack using coordinates
-        4. Pick a row from 1 - 8 and Column A - H
-        5. If you select correctly you destroy 1 enemy ship
-        6. A direct hit is represented by X and a miss by -
-        7. Unselected squares are represented by a blank space
-        8. Destroy all enemy ships to win
-        9. You have 25 attempts to destroy ememy ships or you lose
+    1. There are 5 enemy ships to be destroyed
+    2. The gameboard consists of 64 squares
+    3. You must chose which sqaure to attack using coordinates
+    4. Pick a row from 1 - 8 and Column A - H
+    5. If you select correctly you destroy 1 enemy ship
+    6. A direct hit is represented by X and a miss by -
+    7. Unselected squares are represented by a blank space
+    8. Destroy all enemy ships to win
+    9. You have 25 attempts to destroy ememy ships or you lose
         
-        Have fun!!!
-        """
+    Have fun!!!
+    """
     )
 
 # Global variable for your ship locations
@@ -90,7 +90,6 @@ def main():
         random_ships(YOURBOARD)
         turns = 25
         while turns > 0:
-            print('Battleship')
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
             if ENEMYBOARD[row][column] == '-':
