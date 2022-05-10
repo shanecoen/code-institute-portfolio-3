@@ -20,7 +20,8 @@ def start_menu():
     7. A direct hit is represented by X and a miss by -
     8. Unselected squares are represented by a blank space
     9. Destroy all enemy ships to win
-    10. You have 32 attempts to destroy ememy ships or you lose
+    10. You have 25 attempts to destroy ememy ships or you lose
+    11. You gain 1 turn for direct hit & lose 1 for a miss
         
     Have fun!!!
     """
@@ -90,7 +91,7 @@ def main ():
 
     if __name__ == "__main__":
         random_ships(YOURBOARD)
-        turns = 32
+        turns = 25
         while turns > 0:
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
@@ -99,6 +100,7 @@ def main ():
             elif YOURBOARD[row][column] == 'X':
                 print(' Congratulations, that is a direct hit')
                 ENEMYBOARD[row][column] = 'X'
+                turns += 1
             else:
                 print('Sorry, that was not a direct hit')
                 ENEMYBOARD[row][column] = '-'
