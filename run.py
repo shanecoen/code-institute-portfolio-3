@@ -83,26 +83,26 @@ def ship_hit_counter(board):
     return count
 
 if __name__ == "__main__":
-random_ships(YOURBOARD)
-turns = 20
-while turns > 0:
-    print('Battleship')
-    print_gameboard(ENEMYBOARD)
-    row, column = ship_location()
-    if ENEMYBOARD[row][column] == '-':
-        print('You have already guessed that')
-    elif YOURBOARD[row][column] == 'X':
-        print(' Congratulations, that is a direct hit')
-        ENEMYBOARD[row][column] = 'X'
-        turns -= 1
-    else:
-        print('Sorry, that was not a direct hit')
-        ENEMYBOARD[row][column] = '-'
-        turns -= 1
-    if ship_hit_counter(ENEMYBOARD) == 5:
-        print('Congratulations, you are the winner')
-        break
-    print('You have ' + str(turns) + ' turns remaining')
-    if turns == 0:
-        print('Sorry, you ran out of turns, the game is over')
-        break
+    random_ships(YOURBOARD)
+    turns = 20
+    while turns > 0:
+        print('Battleship')
+        print_gameboard(ENEMYBOARD)
+        row, column = ship_location()
+        if ENEMYBOARD[row][column] == '-':
+            print('You have already guessed that')
+        elif YOURBOARD[row][column] == 'X':
+            print(' Congratulations, that is a direct hit')
+            ENEMYBOARD[row][column] = 'X'
+            turns -= 1
+        else:
+            print('Sorry, that was not a direct hit')
+            ENEMYBOARD[row][column] = '-'
+            turns -= 1
+        if ship_hit_counter(ENEMYBOARD) == 5:
+            print('Congratulations, you are the winner')
+            break
+        print('You have ' + str(turns) + ' turns remaining')
+        if turns == 0:
+            print('Sorry, you ran out of turns, the game is over')
+            break
