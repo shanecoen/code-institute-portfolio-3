@@ -1,4 +1,19 @@
 from random import randint
+import os
+import sys
+
+# Global variable for ship locations
+YOURBOARD = [[' '] * 8 for x in range(8)]
+# Global variable for enemy ship where hits and misses are displayed
+ENEMYBOARD = [[' '] * 8 for i in range(8)]
+
+
+def clear_display():
+    """
+    Used to clear the terminal of all text
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
 
 def start_menu():
     """
@@ -6,38 +21,50 @@ def start_menu():
     to players how the games works
     """
     print(
-    """
-    Welcome to Battleship
-        
-    The rules of battleship are as follows:
+        """
+        Welcome to Battleship
+            
+        The rules of battleship are as follows:
 
-    1. This is a single player battleship game        
-    2. There are 10 enemy ships to be destroyed
-    3. The gameboard consists of 64 squares
-    4. You must chose which square to attack using coordinates
-    5. Pick a row from 1 - 8 and Column A - H
-    6. If you select correctly you destroy 1 enemy ship
-    7. A direct hit is represented by X and a miss by -
-    8. Unselected squares are represented by a blank space
-    9. You have 25 attempts to destroy all ememy ships or you lose
-    10. You gain 1 turn for direct hit & lose 1 turn for a miss
-        
-    Have fun!!!
-    """
+        1. This is a single player battleship game        
+        2. There are 10 enemy ships to be destroyed
+        3. The gameboard consists of 64 squares
+        4. You must chose which square to attack using coordinates
+        5. Pick a row from 1 - 8 and Column A - H
+        6. If you select correctly you destroy 1 enemy ship
+        7. A direct hit is represented by X and a miss by -
+        8. Unselected squares are represented by a blank space
+        9. You have 25 attempts to destroy all ememy ships or you lose
+        10. You gain 1 turn for direct hit & lose 1 turn for a miss
+            
+        Have fun!!!
+        """
     )
 
-# Global variable for your ship locations
-YOURBOARD = [[' '] * 8 for x in range(8)]
-# Global variable for enemy ship where hits and misses are displayed
-ENEMYBOARD = [[' '] * 8 for i in range(8)]
+    # Asks user if they are ready to play the game after reading game rules
+    print('Are you ready to play the game?')
+    answer = input('Enter Y or N: \n').upper()
+    print('')
 
-# Converting letters to numbers
-convert_letters = {
-    'A': 0, 'B': 1, 'C': 2, 'D': 3, 
-    'E': 4, 'F': 5, 'G': 6, 'H': 7,
+    while True:
+        if answer == 'Y':
+            # Runs the main game functions
+            main()
+            break         
+        elif answer == 'N':
+            print('Please read game rules again and press run program')
+            return False
+        else: 
+            print('Please enter Y or N')
+            answer = input('Enter Y or N: \n').upper()
+
+
+def main():
+
+    # Converting letters to numbers
+    convert_letters = {
+        'A': 0, 'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7,
     }
-
-def main():  
 
     def print_gameboard(board):
         """
@@ -57,7 +84,7 @@ def main():
         Creates 10 enemy ships randomly on gameboard
         """
         for ship in range(10):
-            ship_row, ship_column = randint(0,7), randint(0,7)
+            ship_row, ship_column = randint(0, 7), randint(0, 7)
             while board[ship_row][ship_column] == 'X':
                 ship_row, ship_column = ship_location()
             board[ship_row][ship_column] = 'X'
@@ -90,7 +117,7 @@ def main():
 
     if __name__ == "__main__":
         random_ships(YOURBOARD)
-        turns = 25
+        turns = 5
         while turns > 0:
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
@@ -112,48 +139,35 @@ def main():
                 print('Sorry, you ran out of turns, the game is over')
                 break
 
+
 def restart():
     """
     Asks the user if they would like to replay the game once finished
     """
     print('Would you like to play once more?')
     answer = input('Enter Y or N: \n').upper()
-    while True: 
-        if answer == "Y":
-            run_game()
-        elif answer == "N":
+    while True:        
+        if answer == "N":
             print('Thank you for playing and goodbye!!!')
-            return False
-            break
+            sys.exit(0)
+        elif answer == "Y":
+            clear_display()
+            print("Starting new game")        
+            run_game()
         else: 
             print('Please Enter Y or N')
-            answer = input('Enter Y or N: \n').upper()
+            answer = input('Enter Y or N: \n').upper() 
+
 
 def run_game():
     """
-    Starts a new game
+    Starts a new game and runs main function
     """
-    # Displays welcome message and battleship game rules
+    # Displays welcome message, battleship game rules and begins game
     start_menu()
-
-    # Asks user if they are ready to play the game after reading game rules
-    print('Are you ready to play the game?')
-    answer = input('Enter Y or N: \n').upper()
-    print('')
-
-    while True:
-        if answer == 'Y':
-            # Runs the main game functions
-            main()
-            break
-        elif answer == 'N':
-            print('Please read game rules once more and press run program again')
-            return False
-        else: 
-            print('Please enter Y or N')
-            answer = input('Enter Y or N: \n').upper()
     
     # Asks the user if they would like to replay the game once finished
     restart()
+
 
 run_game()
