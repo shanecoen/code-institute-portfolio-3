@@ -117,7 +117,7 @@ def main():
 
     if __name__ == "__main__":
         random_ships(YOURBOARD)
-        turns = 5
+        turns = 25
         while turns > 0:
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
@@ -156,7 +156,7 @@ def restart():
             run_game()
         else: 
             print('Please Enter Y or N')
-            answer = input('Enter Y or N: \n').upper() 
+            answer = input('Enter Y or N: \n').upper()
 
 
 def run_game():
