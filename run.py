@@ -14,6 +14,11 @@ def clear_display():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
+    # Global variable for ship locations
+    YOURBOARD = [[' '] * 8 for x in range(8)]
+    # Global variable for enemy ship where hits and misses are displayed
+    ENEMYBOARD = [[' '] * 8 for i in range(8)]
+
 
 def start_menu():
     """
