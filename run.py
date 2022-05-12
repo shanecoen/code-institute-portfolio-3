@@ -13,7 +13,6 @@ def reset_display():
     with a clear gameboard once player chooses to
     restart a new game after a game ends.
     """
-    # os.system("cls" if os.name == "nt" else "clear") *** DELETE DELETE
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
@@ -26,7 +25,7 @@ def start_menu():
     print(
         """
         Welcome to Mine Hunter
-            
+
         The rules of Mine Hunter are as follows:
 
         1. The aim is to destroy all 10 enemy mines placed on the board
@@ -39,7 +38,7 @@ def start_menu():
         8. Unselected squares are represented by a blank space
         9. You have 25 turns to destroy all ememy mines or you lose
         10. You gain 2 turns for direct hit & lose 1 turn for a miss
-            
+
         Have fun!!!
         """
     )
@@ -53,7 +52,7 @@ def start_menu():
         if answer == 'Y':
             # Runs the main game functions
             main()
-            break         
+            break
         elif answer == 'N':
             print('Please read game rules again and press run program')
             return False
@@ -64,9 +63,9 @@ def start_menu():
 
 def main():
     """
-    Runs all the main Mine Hunter game functions including the 
+    Runs all the main Mine Hunter game functions including the
     printing of the gameboard, the creation of randomly placed
-    enemy mines, which locations the player will attack and 
+    enemy mines, which locations the player will attack and
     counts the number of mines the player has hit.
     """
 
@@ -77,7 +76,7 @@ def main():
 
     def print_gameboard(board):
         """
-        Displays gameboard which is lettered and 
+        Displays gameboard which is lettered and
         numbered to allow user to attack enemy mines
         """
         print('   A  B   C   D   E   F   G   H  ')
@@ -112,7 +111,7 @@ def main():
             column = input('Please enter a mine column letter A - H: ').upper()
         return int(row) - 1, convert_letters[column]
 
-    def mine_hit_counter(board): 
+    def mine_hit_counter(board):
         """
         Counts how many mines player has hit.
         If player hits 10 mines before using all turns, they win.
@@ -177,7 +176,7 @@ def restart():
     print(' ')
     print('Would you like to play once more?')
     answer = input('Enter Y or N: \n').upper()
-    while True:        
+    while True:
         if answer == "N":
             print(' ')
             print('Thank you for playing and goodbye!!!')
@@ -185,9 +184,9 @@ def restart():
             sys.exit(0)
         elif answer == "Y":
             reset_display()
-            print("Starting new game")        
+            print("Starting new game")
             run_game()
-        else: 
+        else:
             print('Please Enter Y or N')
             answer = input('Enter Y or N: \n').upper()
 
@@ -198,7 +197,7 @@ def run_game():
     """
     # Displays welcome message, Mine Hunter game rules and begins game
     start_menu()
-    
+
     # Asks the user if they would like to replay the game once finished
     restart()
 
