@@ -2,17 +2,18 @@ from random import randint
 import os
 import sys
 
-# Global variable for ship locations
+# Global variables for ship locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
-# Global variable for enemy ship where hits and misses are displayed
 ENEMYBOARD = [[' '] * 8 for i in range(8)]
 
 
-def clear_display():
+def reset_display():
     """
-    Used to clear the terminal of all text
+    Used to reset the game and begin from the start
+    with a clear gameboard once player chooses to
+    begin a new game.
     """
-    # os.system("cls" if os.name == "nt" else "clear")
+    # os.system("cls" if os.name == "nt" else "clear") *** DELETE DELETE
     python = sys.executable
     os.execl(python, python, *sys.argv)
 
@@ -30,14 +31,15 @@ def start_menu():
 
         1. This is a single player battleship game        
         2. There are 10 enemy ships to be destroyed
-        3. The gameboard consists of 64 squares
-        4. You must chose which square to attack using coordinates
-        5. Pick a row from 1 - 8 and Column A - H
-        6. If you select correctly you destroy 1 enemy ship
-        7. A direct hit is represented by X and a miss by -
-        8. Unselected squares are represented by a blank space
-        9. You have 25 attempts to destroy all ememy ships or you lose
-        10. You gain 1 turn for direct hit & lose 1 turn for a miss
+        3. Each enemy ship consists of 1 square only
+        4. The gameboard consists of 64 squares
+        5. You must chose which square to attack using coordinates
+        6. Pick a row from 1 - 8 and Column A - H
+        7. If you select correctly you destroy 1 enemy ship
+        8. A direct hit is represented by X and a miss by -
+        9. Unselected squares are represented by a blank space
+        10. You have 25 turns to destroy all ememy ships or you lose
+        11. You gain 2 turns for direct hit & lose 1 turn for a miss
             
         Have fun!!!
         """
@@ -122,7 +124,7 @@ def main():
 
     if __name__ == "__main__":
         random_ships(YOURBOARD)
-        turns = 5
+        turns = 25
         while turns > 0:
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
@@ -131,7 +133,7 @@ def main():
             elif YOURBOARD[row][column] == 'X':
                 print(' Congratulations, that is a direct hit')
                 ENEMYBOARD[row][column] = 'X'
-                turns += 1
+                turns += 2
             else:
                 print('Sorry, that was not a direct hit')
                 ENEMYBOARD[row][column] = '-'
@@ -156,7 +158,7 @@ def restart():
             print('Thank you for playing and goodbye!!!')
             sys.exit(0)
         elif answer == "Y":
-            clear_display()
+            reset_display()
             print("Starting new game")        
             run_game()
         else: 
