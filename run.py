@@ -2,7 +2,7 @@ from random import randint
 import os
 import sys
 
-# Global variables for ship locations
+# Global variables for mine locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
 ENEMYBOARD = [[' '] * 8 for i in range(8)]
 
@@ -20,25 +20,25 @@ def reset_display():
 
 def start_menu():
     """
-    This prints out the rules of battleship to explain
+    This prints out the rules of Mine Hunter to explain
     to players how the games works
     """
     print(
         """
-        Welcome to Battleship
+        Welcome to Mine Hunter
             
-        The rules of battleship are as follows:
+        The rules of Mine Hunter are as follows:
 
-        1. This is a single player battleship game        
-        2. There are 10 enemy ships to be destroyed
-        3. Each enemy ship consists of 1 square only
+        1. The aim is to destroy all enemy mines placed on the board       
+        2. There are 10 enemy mines to be destroyed
+        3. Each enemy mine consists of 1 square only
         4. The gameboard consists of 64 squares
         5. You must chose which square to attack using coordinates
         6. Pick a row from 1 - 8 and Column A - H
-        7. If you select correctly you destroy 1 enemy ship
+        7. If you select correctly you destroy 1 enemy mine
         8. A direct hit is represented by X and a miss by -
         9. Unselected squares are represented by a blank space
-        10. You have 25 turns to destroy all ememy ships or you lose
+        10. You have 25 turns to destroy all ememy mines or you lose
         11. You gain 2 turns for direct hit & lose 1 turn for a miss
             
         Have fun!!!
@@ -65,10 +65,10 @@ def start_menu():
 
 def main():
     """
-    Runs all the main battleship game functions including the 
-    printing of the gameboard, the creation of randonly placed
-    enemy ships, which locations the player will attack and 
-    counts the number of ships the player has hit.
+    Runs all the main Mine Hunter game functions including the 
+    printing of the gameboard, the creation of randomly placed
+    enemy mines, which locations the player will attack and 
+    counts the number of mines the player has hit.
     """
 
     # Converting letters to numbers
@@ -79,7 +79,7 @@ def main():
     def print_gameboard(board):
         """
         Displays gameboard which is lettered and 
-        numbered to allow user to attack enemy ships
+        numbered to allow user to attack enemy mines
         """
         print('   A  B   C   D   E   F   G   H  ')
         print(' --------------------------------')
@@ -89,34 +89,34 @@ def main():
             row_number += 1
             print("")
 
-    def random_ships(board):
+    def random_mines(board):
         """
-        Creates 10 enemy ships randomly on gameboard
+        Creates 10 enemy mines randomly on gameboard
         """
-        for ship in range(10):
-            ship_row, ship_column = randint(0, 7), randint(0, 7)
-            while board[ship_row][ship_column] == 'X':
-                ship_row, ship_column = ship_location()
-            board[ship_row][ship_column] = 'X'
+        for mine in range(10):
+            mine_row, mine_column = randint(0, 7), randint(0, 7)
+            while board[mine_row][mine_column] == 'X':
+                mine_row, mine_column = mine_location()
+            board[mine_row][mine_column] = 'X'
 
-    def ship_location():
+    def mine_location():
         """
         Ask the player which row (1-8) and column (A-H) they wish to guess.
         """
-        row = input('Please enter ship row number from 1 - 8: ')
+        row = input('Please enter mine row number from 1 - 8: ')
         while row not in '12345678':
             print('Please enter a vaid number')
-            row = input('Please enter ship row number from 1 - 8: ')
-        column = input('Please enter a ship column letter A - H: ').upper()
+            row = input('Please enter mine row number from 1 - 8: ')
+        column = input('Please enter a mine column letter A - H: ').upper()
         while column not in 'ABCDEFGH':
             print('Please enter a valid letter')
-            column = input('Please enter a ship column letter A - H: ').upper()
+            column = input('Please enter a mine column letter A - H: ').upper()
         return int(row) - 1, convert_letters[column]
 
-    def ship_hit_counter(board): 
+    def mine_hit_counter(board): 
         """
-        Counts how many ships player has hit.
-        If player hits 10 ships before using all turns, they win.
+        Counts how many mines player has hit.
+        If player hits 10 mines before using all turns, they win.
         """
         count = 0
         for row in board:
@@ -126,17 +126,17 @@ def main():
         return count
 
     """
-    While loop where player has 25 turns to guess ship locations.
+    While loop where player has 25 turns to guess mine locations.
     Messages are displayed depending on whether player has guessed
     correctly or incorrectly. Loop will run until player has used
     all 25 turns.
     """
     if __name__ == "__main__":
-        random_ships(YOURBOARD)
+        random_mines(YOURBOARD)
         turns = 25
         while turns > 0:
             print_gameboard(ENEMYBOARD)
-            row, column = ship_location()
+            row, column = mine_location()
             if ENEMYBOARD[row][column] == '-':
                 print(' ')
                 print('You have already guessed that')
@@ -155,9 +155,9 @@ def main():
                 print(' ')
                 ENEMYBOARD[row][column] = '-'
                 turns -= 1
-            if ship_hit_counter(ENEMYBOARD) == 10:
+            if mine_hit_counter(ENEMYBOARD) == 10:
                 print(' ')
-                print('Congratulations, you have hit all targets!!!')
+                print('Congratulations, you have destroyed all mines!!!')
                 print('You are the winner!!! ')
                 print(' ')
                 break
@@ -197,7 +197,7 @@ def run_game():
     """
     Starts a new game and runs main function
     """
-    # Displays welcome message, battleship game rules and begins game
+    # Displays welcome message, Mine Hunter game rules and begins game
     start_menu()
     
     # Asks the user if they would like to replay the game once finished
