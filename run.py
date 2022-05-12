@@ -29,17 +29,16 @@ def start_menu():
             
         The rules of Mine Hunter are as follows:
 
-        1. The aim is to destroy all enemy mines placed on the board       
-        2. There are 10 enemy mines to be destroyed
-        3. Each enemy mine consists of 1 square only
-        4. The gameboard consists of 64 squares
-        5. You must chose which square to attack using coordinates
-        6. Pick a row from 1 - 8 and Column A - H
-        7. If you select correctly you destroy 1 enemy mine
-        8. A direct hit is represented by X and a miss by -
-        9. Unselected squares are represented by a blank space
-        10. You have 25 turns to destroy all ememy mines or you lose
-        11. You gain 2 turns for direct hit & lose 1 turn for a miss
+        1. The aim is to destroy all 10 enemy mines placed on the board
+        2. Each enemy mine consists of 1 square only
+        3. The gameboard consists of 64 squares
+        4. You must chose which square to attack using coordinates
+        5. Pick a row from 1 - 8 and Column A - H
+        6. If you select correctly you destroy 1 enemy mine
+        7. A direct hit is represented by X and a miss by -
+        8. Unselected squares are represented by a blank space
+        9. You have 25 turns to destroy all ememy mines or you lose
+        10. You gain 2 turns for direct hit & lose 1 turn for a miss
             
         Have fun!!!
         """
@@ -58,7 +57,7 @@ def start_menu():
         elif answer == 'N':
             print('Please read game rules again and press run program')
             return False
-        else: 
+        else:
             print('Please enter Y or N')
             answer = input('Enter Y or N: \n').upper()
 
