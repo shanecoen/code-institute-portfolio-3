@@ -102,6 +102,22 @@ Sorry, you ran out of turns, the game is over.
 
 ![Image of Mine Hunter end game screen](assets/images/readme-endgame.jpg)
 
+### Future Features:
+
+*   Create an option for the Mine Hunter to create a username before the beginning of gameplay.
+
+*   Include a timer to test how quickly the Mine Hunter can destroy all the mines.
+
+*   Create a leaderboard to include the above usernames and score times. This would all allow for a much more enjoyable experience as the Mine Hunter would keep returning to play and beat their previous scores.
+
+*   Create a multiplayer mode where 2 or more players can play at once on numerous game boards and the fastest to clear all mines would win.
+
+*   Improve the games visuals. Add images and color to the gameboard/ text thus making the gameplay much more aesthetically pleasing.
+
+*   Add audio and/ or sound effects for direct hits and misses.
+
+[Back To Contents](<#contents>)
+
 
 
 
