@@ -11,7 +11,7 @@ def reset_display():
     """
     Used to reset the game and begin from the start
     with a clear gameboard once player chooses to
-    begin a new game.
+    restart a new game after a game ends.
     """
     # os.system("cls" if os.name == "nt" else "clear") *** DELETE DELETE
     python = sys.executable
@@ -45,7 +45,7 @@ def start_menu():
         """
     )
 
-    # Asks user if they are ready to play the game after reading game rules
+    # Asks player if they are ready to play the game after reading game rules
     print('Are you ready to play the game?')
     answer = input('Enter Y or N: \n').upper()
     print('')
@@ -65,7 +65,10 @@ def start_menu():
 
 def main():
     """
-    Enter text
+    Runs all the main battleship game functions including the 
+    printing of the gameboard, the creation of randonly placed
+    enemy ships, which locations the player will attack and 
+    counts the number of ships the player has hit.
     """
 
     # Converting letters to numbers
@@ -98,7 +101,7 @@ def main():
 
     def ship_location():
         """
-        Ask the user which row (1-8) and column (A-H) they wish to guess.
+        Ask the player which row (1-8) and column (A-H) they wish to guess.
         """
         row = input('Please enter ship row number from 1 - 8: ')
         while row not in '12345678':
@@ -112,8 +115,8 @@ def main():
 
     def ship_hit_counter(board): 
         """
-        Counts how many ships user has hit.
-        If user hits 10 ships before using lives, they win.
+        Counts how many ships player has hit.
+        If player hits 10 ships before using all turns, they win.
         """
         count = 0
         for row in board:
@@ -122,6 +125,12 @@ def main():
                     count += 1
         return count
 
+    """
+    While loop where player has 25 turns to guess ship locations.
+    Messages are displayed depending on whether player has guessed
+    correctly or incorrectly. Loop will run until player has used
+    all 25 turns.
+    """
     if __name__ == "__main__":
         random_ships(YOURBOARD)
         turns = 25
@@ -129,33 +138,51 @@ def main():
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
             if ENEMYBOARD[row][column] == '-':
+                print(' ')
                 print('You have already guessed that')
+                print(' ')
             elif YOURBOARD[row][column] == 'X':
-                print(' Congratulations, that is a direct hit')
+                print(' ')
+                print('Well Done, that is a direct hit!!!')
+                print('You have gained 2 turns!!!')
+                print(' ')
                 ENEMYBOARD[row][column] = 'X'
                 turns += 2
             else:
-                print('Sorry, that was not a direct hit')
+                print(' ')
+                print('Sorry, that was not a direct hit!!!')
+                print('You have lost 1 turn!!! ')
+                print(' ')
                 ENEMYBOARD[row][column] = '-'
                 turns -= 1
             if ship_hit_counter(ENEMYBOARD) == 10:
-                print('Congratulations, you have hit all targets and won!!!')
+                print(' ')
+                print('Congratulations, you have hit all targets!!!')
+                print('You are the winner!!! ')
+                print(' ')
                 break
             print('You have ' + str(turns) + ' turns remaining')
+            print(' ')
             if turns == 0:
+                print(' ')
                 print('Sorry, you ran out of turns, the game is over')
+                print(' ')
                 break
 
 
 def restart():
     """
-    Asks the user if they would like to replay the game once finished
+    Asks the user if they would like to replay the game once finished.
+    Different messages are displayed depending on their decision.
     """
+    print(' ')
     print('Would you like to play once more?')
     answer = input('Enter Y or N: \n').upper()
     while True:        
         if answer == "N":
+            print(' ')
             print('Thank you for playing and goodbye!!!')
+            print(' ')
             sys.exit(0)
         elif answer == "Y":
             reset_display()
