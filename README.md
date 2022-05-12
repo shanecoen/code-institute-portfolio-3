@@ -116,9 +116,28 @@ Sorry, you ran out of turns, the game is over.
 
 *   Add audio and/ or sound effects for direct hits and misses.
 
+<br>
+
 [Back To Contents](<#contents>)
 
+## **Data Model**
 
+<br>
+
+[Back To Contents](<#contents>)
+
+## **Technologies Used**
+
+*   [Python](https://html.spec.whatwg.org/) - Programming language used to build the game.
+*   [Heroku](https://www.heroku.com/) - This was used to deploy the finished game.
+*   [Github](https://github.com/) - This was used to store, track and manage the Git repository for the game.
+*   [Gitpod](https://www.gitpod.io/) - Provided the development environment for the game.
+
+<br>
+
+[Back To Contents](<#contents>)
+
+## **Testing**
 
 
 
