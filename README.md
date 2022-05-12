@@ -28,10 +28,81 @@ This game is hosted by Heroku and can be played at:
 *   Unselected squares are marked with an empty space
 *   If a correct location is chosen the mine will be destroyed and will be replaced by an X. The Mine Hunter will also gain 2 extra turns.
 *   If incorrect guess is made a - symbol will mark that location. 1 turn will be lost every time this happens.
-*   If all mines are destroyed before turns run out then the Mine Hunter will win the game otherwise it will be a loss.
+*   If all 10 mines are destroyed before turns run out then the Mine Hunter will win the game otherwise it will be a loss.
 *   At the end of the game an option will be presented to play again. Press Y to play again or press N to end that game session.
 
 
 ## **The Design Process**
 
 ### User Stories:
+
+### Game Aims:
+
+### How This Will Be Achieved:
+
+### Game Flow Chart:
+
+[Back To Contents](<#contents>)
+
+## **Features**
+
+### Existing Features:
+
+####  Mine Hunter Welcome Screen:
+
+This is the screen that the player will be presented with first when they access the terminal. It welcomes the player and gives them a number of very clear and concise instructions about how to play the game and what it will take to win. From here the player can decide if they wish to proceed with the game and they can do so by pressing Y.
+
+<br>
+
+![Image of Mine Hunter welcome screen](assets/images/readme-welcome.jpg)
+
+#### The Gameboard:
+
+The Mine Hunter will now be presented with a blank gameboard. They will be a able to view 64 empty square spaces. There are 10 mines placed randomly amongst these spaces. Rows are marked vertically via numbers 1-8 and columns are marked horizontally via letters A-H.
+
+<br>
+
+![Image of Mine Hunter blank gameboard](assets/images/readme-gameboard.jpg)
+
+#### The Game Starts: 
+
+Mine locations can be guessed via the above co-ordinates. The Mine Hunter is first asked to guess a row number 1-8 and secondly a column letter A-H. Numbers and letters outside of these ranges will not be accepted and will result in a message stating this. You also cannot guess the same square twice. After guessing they will notified via on screen text if they were successful and have a made a direct hit. They will be presented with one the following statements:
+
+*   Well Done, that is a direct hit!!!
+    You have gained 2 turns!!!
+
+*   Sorry, that was not a direct hit!!!
+    You have lost 1 turn!!!
+
+A direct hit will result in a mine being destroyed and will be marked by an X. An unsuccesful attempt will br marked by an - symbol.
+
+How many turns the Mine Hunter has remaining will always be displayed above the gameboard.
+
+<br>
+
+![Image of Mine Hunter gameplay](assets/images/readme-gameplay.jpg)
+
+#### The Game Ends:
+
+There are two possible outcomes of this game:
+
+*   The Mine Hunter has guessed all 10 mine locations. The mines have been destroyed and they are victorious. If this happens the message below will be displayed:
+
+Congratulations, you have destroyed all mines!!!')
+You are the winner!!!
+
+*   The Mine Hunter has not been successful with their guesses. All the mines have not be destroyed and all turns have run out resulting in defeat.
+
+You Have 0 turns remaining
+Sorry, you ran out of turns, the game is over.
+
+* Regardless of the game outcome the Mine Hunter will be presented with an opportunity to restart the game via the Y or N option. Pressing Y will restart and return to the welcome screen and pressing N will end the game session.
+
+<br>
+
+![Image of Mine Hunter end game screen](assets/images/readme-endgame.jpg)
+
+
+
+
+

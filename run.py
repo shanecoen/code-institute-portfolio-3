@@ -103,7 +103,7 @@ def main():
         """
         row = input('Please enter mine row number from 1 - 8: ')
         while row not in '12345678':
-            print('Please enter a vaid number')
+            print('Please enter a valid number')
             row = input('Please enter mine row number from 1 - 8: ')
         column = input('Please enter a mine column letter A - H: ').upper()
         while column not in 'ABCDEFGH':
