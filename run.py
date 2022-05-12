@@ -12,12 +12,9 @@ def clear_display():
     """
     Used to clear the terminal of all text
     """
-    os.system("cls" if os.name == "nt" else "clear")
-
-    # Global variable for ship locations
-    YOURBOARD = [[' '] * 8 for x in range(8)]
-    # Global variable for enemy ship where hits and misses are displayed
-    ENEMYBOARD = [[' '] * 8 for i in range(8)]
+    # os.system("cls" if os.name == "nt" else "clear")
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
 
 
 def start_menu():
@@ -65,6 +62,9 @@ def start_menu():
 
 
 def main():
+    """
+    Enter text
+    """
 
     # Converting letters to numbers
     convert_letters = {
@@ -122,7 +122,7 @@ def main():
 
     if __name__ == "__main__":
         random_ships(YOURBOARD)
-        turns = 25
+        turns = 5
         while turns > 0:
             print_gameboard(ENEMYBOARD)
             row, column = ship_location()
