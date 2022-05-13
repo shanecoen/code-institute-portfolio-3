@@ -140,6 +140,10 @@ Sorry, you ran out of turns, the game is over.
 
 ## **Data Model**
 
+The Data model is based on functions used as the steps to start a new game, print a new gameboard, place random mines, allow the player to guess locations and a hit counter. Two global variables named YOURBOARD and ENEMYBOARD are used in conjunction with these functions.
+
+These functions are called from within the 'main' function. This main function, along with start/ restart functions are called by the 'run_game' function. As each function is executed, with the player guessing mine locations (which either hit or miss) until the game reaches its conclusion and the restart option is given.
+
 <br>
 
 [Back To Contents](<#contents>)
