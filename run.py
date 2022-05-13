@@ -2,6 +2,27 @@ from random import randint
 import os
 import sys
 
+"""
+The Following Tutorials On How To Build Minesweeper and Battleship
+games in Python Were used as Inspiration for my code and where used
+was edited to suit my requirements:
+
+Title: Python Game Tutorial: Minesweeper Basic Game Functions
+Author: TokyoEdtech
+Date: 2021
+Url: https://www.youtube.com/watch?v=XTT8mXwIGpQ
+
+Title: How to Code Battleship in Python
+Author: Knowledge Mavens
+Date: 2021
+Url: https://www.youtube.com/watch?v=tF1WRCrd_HQ
+
+Title: Python For Beginners: Battleship
+Author: Austin Montgomery
+Date: 2020
+Url: https://bigmonty12.github.io/battleship
+"""
+
 # Global variables for mine locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
 ENEMYBOARD = [[' '] * 8 for i in range(8)]

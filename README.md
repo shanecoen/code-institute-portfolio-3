@@ -1,8 +1,8 @@
-# Mine Hunter
+# **Mine Hunter**
 
 Mine Hunter is a fun and interactive single player game which can be played in the Code Institute mock python terminal. This game is a mixture between traditional favourites Minesweeper and Battleship where the aim of the game is to locate and destroy all enemy mines before it is too late!!!
 
-## The Game
+## **The Game**
 
 <br>
 
@@ -20,7 +20,7 @@ This game is hosted by Heroku and can be played at:
 * [**The Design Process**](<#the-design-process>)
     * [User Stories](<#user-stories>)
     * [Game Aims](<#game-aims>)
-    * [How This Will Be Achieved](<#how-this-will-achieved>)
+    * [How This Will Be Achieved](<#how-this-will-be-achieved>)
     * [Game Flow Chart](<#game-flow-chart>)
 * [**Features**](<#features>)
     * [Existing Features](<#existing-features>)        
@@ -35,8 +35,8 @@ This game is hosted by Heroku and can be played at:
     * [Code Validation](<#code-validation>)
     * [Testing User Stories](<#testing-user-stories>)
     * [Known Bugs](<#known-bugs>)
-        * Resolved Bugs
-        * Unresolved Bugs
+        * [Resolved Bugs](<#resolved-bugs>)
+        * [Unresolved Bugs](<#unresolved-bugs>)
 * [**Deployment**](<#deployment>)
     * [Heroku](<#heroku>)
     * [To Fork A Repository On GitHub](<#to-fork-a-repository-on-github>)
@@ -227,7 +227,7 @@ During the development process this game was continually tested in the local ter
 
 ### Known Bugs:
 
-*   Resolved Bugs
+####  Resolved Bugs:
 
 1.  One problem that arose during the development process was when a game ended and the option was then presented to the player to play again. The player is asked to press Y to play again or N to end the session. If they pressed N everything worked as expected however a number of problems arose when Y was selected. The game should start again but two errors were acourring. 1) Instead of a new blank gameboard appearing, a new game was starting and the previous gameboard appeared which still kept all the X and - selections. This meant that the player was continuing the previous game (with 25 new turns) rather than starting a new one. 2) A new board was not appearing at all and the player was just asked to enter a continuous amount of co-ordinates without a new game beginning.
 
@@ -238,7 +238,7 @@ During the development process this game was continually tested in the local ter
 
     Now when the player selects Y, a new game will begin from the welcome screen with a new gamebaord.
 
-*   Unresolved Bugs
+####   Unresolved Bugs:
 
 During development there was a number of bugs found that have remained unresolved. All of these issues would be resolved with more time working on this game. They were as follows:
 
