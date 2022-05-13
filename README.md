@@ -142,7 +142,7 @@ There are two possible outcomes of this game:
 
 *   The Mine Hunter has guessed all 10 mine locations. The mines have been destroyed and they are victorious. If this happens the message below will be displayed:
 
-Congratulations, you have destroyed all mines!!!')
+Congratulations, you have destroyed all mines!!!
 You are the winner!!!
 
 *   The Mine Hunter has not been successful with their guesses. All the mines have not be destroyed and all turns have run out resulting in defeat.
@@ -215,11 +215,11 @@ During the development process this game was continually tested in the local ter
 ### Testing User Stories:
 
 *   As a player I want to be able to **understand** the games **purpose instantly** upon loading it.
-    * Instantantly **upon loading** it is very obvious to the player what the game is as the **heading Mine Hunter** is the first thing they will see.
+    * Instantly **upon loading** it is very obvious to the player what the game is as the **heading Mine Hunter** is the first thing they will see.
 *   As a player I want to be able to **understand** how the game **functions** from the **outset**.
     * The first thing the player is presented with **upon loading** is a set of very **clear and concise instructions** as to how the game operates and what is takes to be successful.
 *   As a player I want to be able to play an enjoyable and challenging game.
-    * Once the game begins the player is presented with a **fun interactive game** that is very challenging. **Success** in this game is **not easily achieved** and will result in the **player coming back** time and time again as they strive to be succefful.
+    * Once the game begins the player is presented with a **fun interactive game** that is very challenging. **Success** in this game is **not easily achieved** and will result in the **player coming back** time and time again as they strive to be successful.
 *   As a player I want to be able to **track my progress** as the game goes on.
     * At all times the **number of turns** the player has left is **visible**. They start with 25 turns, they gain 2 turns for every direct hit and lose 1 for every miss. This is **updated at every attempt**.
 *   As a player I want to be able to **restart** the game again **easily once one game ends**.
@@ -229,7 +229,7 @@ During the development process this game was continually tested in the local ter
 
 ####  Resolved Bugs:
 
-1.  One problem that arose during the development process was when a game ended and the option was then presented to the player to play again. The player is asked to press Y to play again or N to end the session. If they pressed N everything worked as expected however a number of problems arose when Y was selected. The game should start again but two errors were acourring. 1) Instead of a new blank gameboard appearing, a new game was starting and the previous gameboard appeared which still kept all the X and - selections. This meant that the player was continuing the previous game (with 25 new turns) rather than starting a new one. 2) A new board was not appearing at all and the player was just asked to enter a continuous amount of co-ordinates without a new game beginning.
+1.  One problem that arose during the development process was when a game ended and the option was then presented to the player to play again. The player is asked to press Y to play again or N to end the session. If they pressed N everything worked as expected, however a number of problems arose when Y was selected. The game should start again but two errors were occuring. 1) Instead of a new blank gameboard appearing, a new game was starting and the previous gameboard appeared which still kept all the X and - selections. This meant that the player was continuing the previous game (with 25 new turns) rather than starting a new one. 2) A new board was not appearing at all and the player was just asked to enter a continuous amount of co-ordinates without a new game beginning.
 
     This problem was being caused because when the player choose Y to restart the game again, the previous game was not reseting itself back to the beginning. It was merely bringing the player back to the start game and just trying to continue the previous game. A solution had to be found to restart everything and revert back to the welcome screen. This was solved by importing the os module and creating a reset_display function and running the following code:
 
@@ -259,7 +259,7 @@ During development there was a number of bugs found that have remained unresolve
 This game was deployed using Heroku and it can be viewed below:<br> 
 [Mine Hunter](https://minehunter-sc.herokuapp.com/)
 
-In order to deploy this game a number of steps had to be undertaken;
+In order to deploy this game a number of steps had to be undertaken:
 
 1.  Push most up-to-date code to GitHub
 2.  If necessary, make sure the requirements for the project are added to the requirements.txt file prior to deployment.
@@ -267,13 +267,13 @@ In order to deploy this game a number of steps had to be undertaken;
 4.  Either login or create new account if using heroku for the first time
 5.  From the Heroku dashboard, click create new app
 6.  Create a new unique name for your app, select your region and click create app
-7.  A new heroku app has now been created. You are then presented with a number of tabs at the time of the screen. Select the settings tab. Its very important that this selection is selected before proceeding to deployment
+7.  A new heroku app has now been created. You are then presented with a number of tabs at the time of the screen. Select the settings tab. Its very important that this is selected before proceeding to deployment
 8.  Naviagte to Config Vars section and click reveal config vars button
 9.  Add new config var: key = PORT and value = 8000
 10. Navigate to the Buildpacks section and click on Add Buildpack, select Python and save changes
 11. Click on Add Buildpack once again and select node.js. Save changes
 12. Once selected make sure Python is listed above node.js in the dashboard
-13. Naviagte once again to the top of the screen and select the Deploy tab
+13. Navigate once again to the top of the screen and select the Deploy tab
 14. In the deployment method section, select GitHub and confirm the connection.
 15. Once the app is connected to GitHub, search for the repository name and click connect.
 16. Scroll to bottom of screen and if desired you can choose to enable automatic deploys. This will ensure the app is updated every time code is pushed to GitHub. You can also choose to manually deploy if preferred.
@@ -308,14 +308,14 @@ A fork is a copy of a repository. Forking a repository allows you to freely expe
 ### Game Content:
 
 *   All text content used in this game is owned by the developer.
-*   Code Institute provided the Python essentials template used in the development process of this game and they also provided the mock terminal used for its displaya and gameplay.
+*   Code Institute provided the Python essentials template used in the development process of this game and they also provided the mock terminal used for its display and gameplay.
 
 ### Code:
 
 * While working on the Python code for this game there were a number of tutorials studied which detailed the development process of Minesweeper and Battleship games. Inspiration for my code was taken from the tutorials below and where used was edited to suit this games requirements.
 
     * Title: [Python Game Tutorial: Minesweeper Basic Game Functions](https://www.youtube.com/watch?v=XTT8mXwIGpQ), Date: 2021, Author: TokyoEdtech.
-    * Title: [How to Code Battleship in Python - Single Player Game](https://www.youtube.com/watch?v=tF1WRCrd_HQ), Date: 2021, Author: Knowledge Mavens.
+    * Title: [How to Code Battleship in Python](https://www.youtube.com/watch?v=tF1WRCrd_HQ), Date: 2021, Author: Knowledge Mavens.
     * Title: [Python For Beginners: Battleship](https://bigmonty12.github.io/battleship), Date: 2020, Author: Austin Montgomery.
 
 ## **Acknowledgements**
