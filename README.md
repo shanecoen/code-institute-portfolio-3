@@ -82,7 +82,7 @@ How many turns the Mine Hunter has remaining will always be displayed above the 
 
 ![Image of Mine Hunter gameplay](assets/images/readme-gameplay.jpg)
 
-#### The Game Ends:
+#### The End Game:
 
 There are two possible outcomes of this game:
 
@@ -138,6 +138,53 @@ Sorry, you ran out of turns, the game is over.
 [Back To Contents](<#contents>)
 
 ## **Testing**
+
+### Code Validation:
+
+<br>
+
+![Image of Python PEP8 coded Validation result](assets/images/readme-code-validation.jpg)
+
+### Testing User Stories:
+
+### Known Bugs:
+
+*   Resolved Bugs
+
+*   Unresolved Bugs
+
+<br>
+
+[Back To Contents](<#contents>)
+
+## **Deployment**
+
+### Heroku:
+
+### To Fork A Repository On GitHub:
+
+A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. In order to fork this repository follow the steps below;
+
+1. Log into your GitHub account and locate the repository your wish to fork.
+2. On the top right corner of the repository page locate the "Fork" option.
+3. Click this button and a copy of the original repository will now be created in your GitHub account.
+
+### Creating A Local Clone of Game Files From GitHub:
+
+1. Log into your GitHub account and locate the repository you wish to clone.
+2. When in the repository, click on the "code" tab.
+3. When the menu opens; select HTTPS and copy the link on right side.
+4. Naviagte to an IDE and open GIT bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type "git clone"
+7. Paste the URL of the code you have copied from GitHub,
+8. Press enter and your local clone will have been created.
+
+<br>
+
+[Back To Contents](<#contents>)
+
+## **Credits**
 
 
 
