@@ -16,6 +16,36 @@ This game is hosted by Heroku and can be played at:
 
 ## **Contents**
 
+* [**How To Play**](<#how-to-play>)
+* [**The Design Process**](<#the-design-process>)
+    * [User Stories](<#user-stories>)
+    * [Game Aims](<#game-aims>)
+    * [How This Will Be Achieved](<#how-this-will-achieved>)
+    * [Game Flow Chart](<#game-flow-chart>)
+* [**Features**](<#features>)
+    * [Existing Features](<#existing-features>)        
+        * [Mine Hunter Welcome Screen](<#mine-hunter-welcome-screen>)
+        * [The Gameboard](<#the-gameboard>)
+        * [Start Game](<#start-game>)
+        * [End Game](<#end-game>)
+    * [Future Features](<#future-features>)
+* [**Data Model**](<#data-model>)    
+* [**Technologies Used**](<#technologies-used>)
+* [**Testing**](<#testing>)
+    * [Code Validation](<#code-validation>)
+    * [Testing User Stories](<#testing-user-stories>)
+    * [Known Bugs](<#known-bugs>)
+        * Resolved Bugs
+        * Unresolved Bugs
+* [**Deployment**](<#deployment>)
+    * [Heroku](<#heroku>)
+    * [To Fork A Repository On GitHub](<#to-fork-a-repository-on-github>)
+    * [Creating A Local Clone Of Website Files From GitHub](<#creating-a-local-clone-of-website-files-from-github>)
+* [**Credits**](<#credits>)
+    * [Game Content](<#game-content>)
+    * [Code](<#code>)
+* [**Acknowledgements**](<#acknowledgements>)
+
 ## **How To Play**
 
 *   Read the game instructions carefully
@@ -32,7 +62,7 @@ This game is hosted by Heroku and can be played at:
 *   At the end of the game an option will be presented to play again. Press Y to play again or press N to end that game session.
 
 
-## **The Planning And Design Process**
+## **The Design Process**
 
 ### User Stories:
 
@@ -88,7 +118,7 @@ The Mine Hunter will now be presented with a blank gameboard. They will be a abl
 
 ![Image of Mine Hunter blank gameboard](assets/images/readme-gameboard.jpg)
 
-#### The Game Starts: 
+#### Start Game: 
 
 Mine locations can be guessed via the above co-ordinates. The Mine Hunter is first asked to guess a row number 1-8 and secondly a column letter A-H. Numbers and letters outside of these ranges will not be accepted and will result in a message stating this. You also cannot guess the same square twice. After guessing they will notified via on screen text if they were successful and have a made a direct hit. They will be presented with one the following statements:
 
@@ -106,7 +136,7 @@ How many turns the Mine Hunter has remaining will always be displayed above the 
 
 ![Image of Mine Hunter gameplay](assets/images/readme-gameplay.jpg)
 
-#### The End Game:
+#### End Game:
 
 There are two possible outcomes of this game:
 
