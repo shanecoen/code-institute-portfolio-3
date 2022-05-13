@@ -153,7 +153,24 @@ Sorry, you ran out of turns, the game is over.
 
 *   Resolved Bugs
 
+1.  One problem that arose during the development process was when a game ended and the option was then presented to the player to play again. The player is asked to press Y to play again or N to end the session. If they pressed N everything worked as expected however a number of problems arose when Y was selected. The game should start again but two errors were acourring. 1) Instead of a new blank gameboard appearing, a new game was starting and the previous gameboard appeared which still kept all the X and - selections. This meant that the player was continuing the previous game (with 25 new turns) rather than starting a new one. 2) A new board was not appearing at all and the player was just asked to enter a continuous amount of co-ordinates without a new game beginning.
+
+    This problem was being caused because when the player choose Y to restart the game again, the previous game was not reseting itself back to the beginning. It was merely bringing the player back to the start game and just trying to continue the previous game. A solution had to be found to restart everything and revert back to the welcome screen. This was solved by importing the os module and creating a reset_display function and running the following code:
+
+    - python = sys.executable
+    - os.execl(python, python, *sys.argv)
+
+    Now when the player selects Y, a new game will begin from the welcome screen with a new gamebaord.
+
 *   Unresolved Bugs
+
+During development there was a number of bugs found that have remained unresolved. All of these issues would be resolved with more time working on this game. They were as follows:
+
+1.  When a new game begins you are firstly presented with the welcome screen and game rules. Pressing Y should then always proceed directly to a blank gameboard. Sometimes the player is asked to enter co-ordinates before the gameboard appears. This should not happen and the gameboard should always appear before any co-ordinates are requested from the player.
+
+2.  When entering co-ordinates, the player is asked to enter 1-8 for a row and A-H for a column. Entering an invalid number or letter will result in a notification appearing stating that. However if the player hits enter with just a blank space (and neither a letter or number) then the game will crash. The player will have to hit run program to begin game again.
+
+3.  The game ends when the player either destroys all mines or runs out of turns. When either result happens, the last player choice (either X or -) does not show up on the gameboard. The game will announce the result but the last selection is not shown.
 
 <br>
 
