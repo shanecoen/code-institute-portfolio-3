@@ -60,6 +60,12 @@ This game aims to:
 
 ### Game Flow Chart:
 
+The following flow chart was created at the beginning of the design process in order to help understand the steps required in order to program the Mine Hunter game. The below chart was created using [Lucid Chart](https://lucid.co/).
+
+<br>
+
+![Image of mine hunter game flow chart](assets/images/readme-flowchart.jpg)
+
 [Back To Contents](<#contents>)
 
 ## **Features**
