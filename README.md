@@ -136,6 +136,10 @@ Sorry, you ran out of turns, the game is over.
 
 *   Create a multiplayer mode where 2 or more players can play at once on numerous game boards and the fastest to clear all mines would win.
 
+*   Make some mines bigger than just one square in size.
+
+*   At present the game just shows how many turns are left. It would be good to also inlcude the number of mines exploded and left unexploded in this feature.
+
 *   Improve the games visuals. Add images and color to the gameboard/ text thus making the gameplay much more aesthetically pleasing.
 
 *   Add audio and/ or sound effects for direct hits and misses.
@@ -160,6 +164,7 @@ These functions are called from within the 'main' function. This main function, 
 *   [Heroku](https://www.heroku.com/) - This was used to deploy the finished game.
 *   [Github](https://github.com/) - This was used to store, track and manage the Git repository for the game.
 *   [Gitpod](https://www.gitpod.io/) - Provided the development environment for the game.
+*   [Lucid Chart](https://www.lucidchart.com/pages/) - This was used to produce the flow charts used in the design process.
 
 <br>
 
