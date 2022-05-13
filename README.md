@@ -36,6 +36,12 @@ This game is hosted by Heroku and can be played at:
 
 ### User Stories:
 
+*   As a player I want to be able to understand the games purpose instantly upon loading it.
+*   As a player I want to be able to understand how the game functions from the outset.
+*   As a player I want to be able to play an enjoyable and challenging game.
+*   As a player I want to be able to track my progress as the game goes on.
+*   As a player I want to be able to restart the game again easily once one game ends.
+
 ### Game Aims:
 
 ### How This Will Be Achieved:
@@ -141,13 +147,24 @@ Sorry, you ran out of turns, the game is over.
 
 ### Code Validation:
 
-*   The Python code from this game has been validated using [PEP8 Online](http://pep8online.com/) to ensure that it complies with the all relevant. run.py was tested using this and has come back 100% clear from errors (see image below).
+*   The Python code from this game has been validated using [PEP8 Online](http://pep8online.com/) to ensure that it complies with the all relevant standards. run.py was tested using this and has come back 100% clear from all errors (see image below).
 
 <br>
 
 ![Image of Python PEP8 coded Validation result](assets/images/readme-code-validation.jpg)
 
 ### Testing User Stories:
+
+*   As a player I want to be able to **understand** the games **purpose instantly** upon loading it.
+    * Instantantly **upon loading** it is very obvious to the player what the game is as the **heading Mine Hunter** is the first thing they will see.
+*   As a player I want to be able to **understand** how the game **functions** from the **outset**.
+    * The first thing the player is presented with **upon loading** is a set of very **clear and concise instructions** as to how the game operates and what is takes to be successful.
+*   As a player I want to be able to play an enjoyable and challenging game.
+    * Once the game begins the player is presented with a **fun interactive game** that is very challenging. **Success** in this game is **not easily achieved** and will result in the **player coming back** time and time again as they strive to be succefful.
+*   As a player I want to be able to **track my progress** as the game goes on.
+    * At all times the **number of turns** the player has left is **visible**. They start with 25 turns, they gain 2 turns for every direct hit and lose 1 for every miss. This is **updated at every attempt**.
+*   As a player I want to be able to **restart** the game again **easily once one game ends**.
+    * Once the game ends the player is told if they are victorious or not. Straight away they are then given the **option to restart** the game regardless of the previous result.
 
 ### Known Bugs:
 
