@@ -199,4 +199,12 @@ A fork is a copy of a repository. Forking a repository allows you to freely expe
     * Title: [How to Code Battleship in Python - Single Player Game](https://www.youtube.com/watch?v=tF1WRCrd_HQ), Date: 2021, Author: Knowledge Mavens.
     * Title: [Python For Beginners: Battleship](https://bigmonty12.github.io/battleship), Date: 2020, Author: Austin Montgomery.
 
+## **Acknowledgements**
 
+This game was completed as part of Code Institute's Diploma in Full Stack Software Development program and was completed in May 2022. I wish to thank my mentor Spencer Barriball for all the time and effort given to me during the time spent on this project. I also wish to acknowledge the slack community and all those at Code Institute for all their help and support.
+
+Shane Coen, 2022.
+
+<br>
+
+[Back To Contents](<#contents>)
