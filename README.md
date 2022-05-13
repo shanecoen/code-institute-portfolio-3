@@ -40,7 +40,7 @@ This game is hosted by Heroku and can be played at:
 * [**Deployment**](<#deployment>)
     * [Heroku](<#heroku>)
     * [To Fork A Repository On GitHub](<#to-fork-a-repository-on-github>)
-    * [Creating A Local Clone Of Website Files From GitHub](<#creating-a-local-clone-of-website-files-from-github>)
+    * [Creating A Local Clone Of Game Files From GitHub](<#creating-a-local-clone-of-game-files-from-github>)
 * [**Credits**](<#credits>)
     * [Game Content](<#game-content>)
     * [Code](<#code>)
