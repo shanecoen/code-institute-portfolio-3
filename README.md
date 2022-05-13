@@ -145,6 +145,8 @@ Sorry, you ran out of turns, the game is over.
 
 ## **Testing**
 
+During the development process this game was continually tested in the local terminal and also in the Code Institute Heroku terminal. This was done to ensure that it was always functioning as expected and also to ensure that any issues could be resolved easily and staright away.
+
 ### Code Validation:
 
 *   The Python code from this game has been validated using [PEP8 Online](http://pep8online.com/) to ensure that it complies with the all relevant standards. run.py was tested using this and has come back 100% clear from all errors (see image below).
