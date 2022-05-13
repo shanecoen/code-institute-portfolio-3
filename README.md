@@ -32,7 +32,7 @@ This game is hosted by Heroku and can be played at:
 *   At the end of the game an option will be presented to play again. Press Y to play again or press N to end that game session.
 
 
-## **The Design Process**
+## **The Planning And Design Process**
 
 ### User Stories:
 
@@ -44,7 +44,19 @@ This game is hosted by Heroku and can be played at:
 
 ### Game Aims:
 
+This game aims to:
+
+1.   Make it clear what the game is about without the need for further explanation from external sources.
+2.   Communicate a clear and appropriate response to all player inputs.
+3.   Continue in a loop without any errors or without ever crashing after a players input.
+4.   Allow the player to have an enjoyable experience playing Mine Hunter by themselves.
+
 ### How This Will Be Achieved:
+
+1.   The player is presented with a welcome screen straight after loading where they have an opportunity to read the game instructions and instantly gain an understanding as to what the game is about.
+2.  Ensure that all user input provide an appropriate response.
+3.  Any unexpected player input will show a message to inform the player that their entry was invalid and guide them on how to input as expected.
+4.  Executing all of the above successfully to ensure a very enjoyable experience.
 
 ### Game Flow Chart:
 
