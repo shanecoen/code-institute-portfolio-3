@@ -5,8 +5,9 @@ import sys
 
 # Please see ReadMe Credits section for details on code inspiration
 
-# Global variables for mine locations
+# Global variables for holding mine locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
+# Global variable for displaying hits and misses
 ENEMYBOARD = [[' '] * 8 for i in range(8)]
 
 
