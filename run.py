@@ -1,27 +1,9 @@
+# Libraries
 from random import randint
 import os
 import sys
 
-"""
-The Following Tutorials On How To Build Minesweeper and Battleship
-games in Python Were used as Inspiration for my code and where used
-was edited to suit my requirements:
-
-Title: Python Game Tutorial: Minesweeper Basic Game Functions
-Author: TokyoEdtech
-Date: 2021
-Url: https://www.youtube.com/watch?v=XTT8mXwIGpQ
-
-Title: How to Code Battleship in Python
-Author: Knowledge Mavens
-Date: 2021
-Url: https://www.youtube.com/watch?v=tF1WRCrd_HQ
-
-Title: Python For Beginners: Battleship
-Author: Austin Montgomery
-Date: 2020
-Url: https://bigmonty12.github.io/battleship
-"""
+# Please see ReadMe Credits section for details on code inspiration
 
 # Global variables for mine locations
 YOURBOARD = [[' '] * 8 for x in range(8)]
@@ -145,12 +127,7 @@ def main():
                     count += 1
         return count
 
-    """
-    While loop where player has 25 turns to guess mine locations.
-    Messages are displayed depending on whether player has guessed
-    correctly or incorrectly. Loop will run until player has used
-    all 25 turns.
-    """
+    # While loop which runs until player has lost all 25 turns
     if __name__ == "__main__":
         random_mines(YOURBOARD)
         turns = 25
