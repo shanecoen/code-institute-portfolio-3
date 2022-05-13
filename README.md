@@ -186,5 +186,17 @@ A fork is a copy of a repository. Forking a repository allows you to freely expe
 
 ## **Credits**
 
+### Game Content:
+
+*   All text content used in this game is owned by the developer.
+*   Code Institute provided the Python essentials template used in the development process of this game and they also provided the mock terminal used for its displaya and gameplay.
+
+### Code:
+
+* While working on the Python code for this game there were a number of tutorials studied which detailed the development process of Minesweeper and Battleship games. Inspiration for my code was taken from the tutorials below and where used was edited to suit this games requirements.
+
+    * Title: [Python Game Tutorial: Minesweeper Basic Game Functions](https://www.youtube.com/watch?v=XTT8mXwIGpQ), Date: 2021, Author: TokyoEdtech.
+    * Title: [How to Code Battleship in Python - Single Player Game](https://www.youtube.com/watch?v=tF1WRCrd_HQ), Date: 2021, Author: Knowledge Mavens.
+    * Title: [Python For Beginners: Battleship](https://bigmonty12.github.io/battleship), Date: 2020, Author: Austin Montgomery.
 
 
