@@ -101,14 +101,14 @@ def main():
         """
         Ask the player which row (1-8) and column (A-H) they wish to guess.
         """
-        row = input('Please enter mine row number from 1 - 8: ')
+        row = input('Please enter mine row number from 1 - 8: \n')
         while row not in '12345678':
             print('Please enter a valid number')
-            row = input('Please enter mine row number from 1 - 8: ')
-        column = input('Please enter a mine column letter A - H: ').upper()
+            row = input('Please enter mine row number from 1 - 8: \n')
+        column = input('Please enter a mine column letter A - H: \n').upper()
         while column not in 'ABCDEFGH':
             print('Please enter a valid letter')
-            column = input('Please enter a mine column letter A - H: ').upper()
+            column = input('Please enter a mine column letter A - H: \n').upper()
         return int(row) - 1, convert_letters[column]
 
     def mine_hit_counter(board):

@@ -161,6 +161,30 @@ Sorry, you ran out of turns, the game is over.
 
 ### Heroku:
 
+This game was deployed using Heroku and it can be viewed below:<br> 
+[Mine Hunter](https://minehunter-sc.herokuapp.com/)
+
+In order to deploy this game a number of steps had to be undertaken;
+
+1.  Push most up-to-date code to GitHub
+2.  If necessary, make sure the requirements for the project are added to the requirements.txt file prior to deployment.
+3.  Naviagte to [Heroku](https://id.heroku.com/login)
+4.  Either login or create new account if using heroku for the first time
+5.  From the Heroku dashboard, click create new app
+6.  Create a new unique name for your app, select your region and click create app
+7.  A new heroku app has now been created. You are then presented with a number of tabs at the time of the screen. Select the settings tab. Its very important that this selection is selected before proceeding to deployment
+8.  Naviagte to Config Vars section and click reveal config vars button
+9.  Add new config var: key = PORT and value = 8000
+10. Navigate to the Buildpacks section and click on Add Buildpack, select Python and save changes
+11. Click on Add Buildpack once again and select node.js. Save changes
+12. Once selected make sure Python is listed above node.js in the dashboard
+13. Naviagte once again to the top of the screen and select the Deploy tab
+14. In the deployment method section, select GitHub and confirm the connection.
+15. Once the app is connected to GitHub, search for the repository name and click connect.
+16. Scroll to bottom of screen and if desired you can choose to enable automatic deploys. This will ensure the app is updated every time code is pushed to GitHub. You can also choose to manually deploy if preferred.
+17. The app will now be successfully deployed.
+18. To view the app after deployment, naviagte to the Heroku app dashboard and click on the open app button in the top right corner. A live version of the deployed app will now open.
+
 ### To Fork A Repository On GitHub:
 
 A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. In order to fork this repository follow the steps below;
