@@ -84,13 +84,13 @@ This game aims to:
 ### How This Will Be Achieved:
 
 1.   The player is presented with a welcome screen straight after loading where they have an opportunity to read the game instructions and instantly gain an understanding as to what the game is about.
-2.  Ensure that all user input provide an appropriate response.
+2.  Ensure that all user input provides an appropriate response.
 3.  Any unexpected player input will show a message to inform the player that their entry was invalid and guide them on how to input as expected.
 4.  Executing all of the above successfully to ensure a very enjoyable experience.
 
 ### Game Flow Chart:
 
-The following flow chart was created at the beginning of the design process in order to help understand the steps required in order to program the Mine Hunter game. The below chart was created using [Lucid Chart](https://lucid.co/).
+The following flow chart was created at the beginning of the design process to help understand the steps required in order to program the Mine Hunter game. The below chart was created using [Lucid Chart](https://lucid.co/).
 
 <br>
 
@@ -236,7 +236,7 @@ During the development process this game was continually tested in the local ter
     - python = sys.executable
     - os.execl(python, python, *sys.argv)
 
-    Now when the player selects Y, a new game will begin from the welcome screen with a new gamebaord.
+    Now when the player selects Y, a new game will begin from the welcome screen with a new gameboard.
 
 ####   Unresolved Bugs:
 
