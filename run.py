@@ -108,7 +108,8 @@ def main():
         column = input('Please enter a mine column letter A - H: \n').upper()
         while column not in 'ABCDEFGH':
             print('Please enter a valid letter')
-            column = input('Please enter a mine column letter A - H: \n').upper()
+            column = input(
+                'Please enter a mine column letter A - H: \n').upper()
         return int(row) - 1, convert_letters[column]
 
     def mine_hit_counter(board):

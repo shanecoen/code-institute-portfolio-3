@@ -128,7 +128,7 @@ Sorry, you ran out of turns, the game is over.
 
 ## **Technologies Used**
 
-*   [Python](https://html.spec.whatwg.org/) - Programming language used to build the game.
+*   [Python](https://docs.python.org/3/library/) - Programming language used to build the game.
 *   [Heroku](https://www.heroku.com/) - This was used to deploy the finished game.
 *   [Github](https://github.com/) - This was used to store, track and manage the Git repository for the game.
 *   [Gitpod](https://www.gitpod.io/) - Provided the development environment for the game.
@@ -140,6 +140,8 @@ Sorry, you ran out of turns, the game is over.
 ## **Testing**
 
 ### Code Validation:
+
+*   The Python code from this game has been validated using [PEP8 Online](http://pep8online.com/) to ensure that it complies with the all relevant. run.py was tested using this and has come back 100% clear from errors (see image below).
 
 <br>
 
